@@ -1,0 +1,86 @@
+.container > div {
+    display: flex;
+    align-items: center;
+    font-size: 1.5em;
+}
+.container {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 60px auto auto auto auto;
+    grid-template-areas: 
+        "h h h h h h h h h h h h"
+        "p p p p p p . . . . . ."
+        "p p p p p p . o o o o ."
+        "p p p p p p . . . . . ."
+        "p p p p p p r r r r . ."
+        ". c d . . . . . . . . ."
+        ;
+}
+body{
+    background-color: aliceblue;
+}
+.header{
+    grid-area: h;
+    background-color:rgba(210, 234, 255, 0.596);
+    position: fixed;
+    width: 99%;
+    z-index: 9;
+}
+.header a{
+    color: rgb(39, 79, 102);
+    font-family: 'Raleway', sans-serif;
+    padding: 15px;
+    text-decoration: none;
+}
+.header a:hover{
+    color: rgb(95, 143, 170);
+}
+p{
+    width: 100%;
+    font-size: 18px;
+    font-family: 'Raleway', sans-serif;
+    color: rgb(41, 136, 219);
+}
+h4{
+    align-content: center;
+}
+img{
+    grid-area: p;
+    width: 100%;
+    position: sticky;
+    margin: 15px;
+    align-content: center;
+    justify-content: center;
+    /* GOOGLE CLIPPING MASK SVG/JPG */
+}
+@media(max-width:100px) {
+    .header {width:100%;}
+}
+    /* ADJUSTING TO RESIZING OF WINDOW*/
+
+button{
+    color: aliceblue;
+    background-color: rgb(39, 79, 102);
+    border-color:rgb(39, 79, 102);
+    width: 60px;
+    height: 50px;
+}
+.circle{
+    border-radius: 50%;
+}
+#hi{
+    grid-area: c;
+}
+#bye{
+    grid-area: d;
+}
+.text{
+    grid-area: o;
+    padding: 10px;
+}
+.contact{
+    grid-area: r;
+    color: rgb(41, 136, 219);
+    justify-content: flex-end;
+}
